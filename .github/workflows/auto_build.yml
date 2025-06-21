@@ -16,7 +16,7 @@ jobs:
     container: debian:latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Build jumploaders
       run: sh build.sh
@@ -34,7 +34,7 @@ jobs:
         done < artifact_files.txt
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Pre-Compiled Jumploaders
         path: temp_artifacts/
